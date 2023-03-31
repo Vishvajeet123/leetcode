@@ -1,0 +1,51 @@
+// Online C++ compiler to run C++ program online
+ #include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+
+class Node  
+{
+    public:
+    int data ;
+    Node * right;
+    Node * left;
+
+Node (int d)
+{
+    left= NULL;
+    right = NULL;
+    data = d ; 
+}
+};
+
+Node * Build_tree(Node * root )
+{
+    cout<<"Enter the Value "<<endl;
+        int data ;
+    cin>>data ;
+    
+    if (data == -1)
+    {
+        return NULL;
+    }
+    
+    root = new Node(data);
+    
+    
+    cout<<"enter the left element  of "<<data<<endl;
+    root->left = Build_tree(root->left);
+    
+    cout<<"enter the  right element  of "<<data<<endl;
+    root->left = Build_tree(root->left);
+        
+        return root ;
+}
+
+
+int main() {
+    Node * root = NULL;
+    root = Build_tree(root);
+
+    return 0;
+}
