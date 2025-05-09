@@ -28,7 +28,7 @@ let lastdigit=0;
 
     if (!negative){
 
-      return reverse_num;
+      return reverse_num;  
 
     }
     return reverse_num*-1;
